@@ -1,0 +1,118 @@
+{% include 'hon_sen/hon.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<link href="{% static '/css/hon.css'  %}" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <center>
+    <form method="POST" class="post-form" action="/register/">
+        {% csrf_token %}
+        <div class="regi">
+            <h2>Register</h2>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="lastnamae">Last Name</label>
+                <input type="text" name="lastnamae" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="firstnamae">
+                    <label for="firstanamae">First Name</label>
+                    <input type="text" name="firstnamae" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="middlenamae">
+                    <label for="middlenamae">Middle Name</label>
+                    <input type="text" name="middlenamae" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="birthdate">
+                    <label for="birthdate">Birth Date</label>
+                    <input type="text" name="birthdate" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="birthplace">
+                    <label for="birthplace">Birthplace</label>
+                    <input type="text" name="birthplace" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="okaasan">
+                    <label for="okaasan">Mother</label>
+                    <input type="text" name="okaasan" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="otosan">
+                    <label for="otosan">Father</label>
+                    <input type="text" name="otosan" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="address">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="">
+                <label for="denwa">
+                    <label for="denwa">Contact No:</label>
+                    <input type="text" name="denwa" class="form-control" required="required" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="nbs">
+                    <label for="nbs">New Born Screening:</label>
+                    <input type="radio" id="yes1nbs" name="nbs" class="form-control" style="height:20px; width:20px;" required="required" />
+                    <label for="yes1nbs">Yes</label>
+                    <input type="radio" id="no1nbs" name="nbs" class="form-control" style="height:20px; width:20px;" required="required" />
+                    <label for="no1nbs">No</label>
+</div>
+                <br>
+                <div class="form-group">
+                    <label for="blood_type">
+                        <label for="blood_type">Blood Type:</label>
+                        <input type="radio" id="a+" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="a+">A+</label>
+                        <input type="radio" id="o+" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="o+">O+</label>
+                        <input type="radio" id="b+" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="b+">B+</label>
+                        <input type="radio" id="ab+" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="ab+">AB+</label>
+                        <input type="radio" id="a-" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="a-">A-</label>
+                        <input type="radio" id="o-" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="o-">O-</label>
+                        <input type="radio" id="b-" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="b-">B-</label>
+                        <input type="radio" id="ab-" name="blood_type" class="form-control" style="height:20px; width:20px;" required="required" />
+                        <label for="ab-">AB-</label>
+                        
+</div>
+                <center><label class="text-danger">{{ msg }}</label></center>
+                <br>
+                <div class="register">
+                    <button class="Register"><span class="glyphicon glyphicon-log-in"></span>Register</button>
+                </div>
+            </div>
+    </form>
+    </center>
+</body>
+</html>

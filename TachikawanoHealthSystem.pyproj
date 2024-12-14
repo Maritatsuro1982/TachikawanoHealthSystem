@@ -1,0 +1,125 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>TachikawanoHealthSystem</Name>
+    <RootNamespace>TachikawanoHealthSystem</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>099e0104-fc57-43e8-ad2e-e84200e8c469</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>TachikawanoHealthSystem.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="hon_sen\admin.py" />
+    <Compile Include="hon_sen\apps.py" />
+    <Compile Include="hon_sen\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hon_sen\migrations\__init__.py" />
+    <Compile Include="hon_sen\models.py" />
+    <Compile Include="hon_sen\tests.py" />
+    <Compile Include="hon_sen\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hon_sen\views.py" />
+    <Compile Include="hon_sen\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="TachikawanoHealthSystem\__init__.py" />
+    <Compile Include="TachikawanoHealthSystem\settings.py" />
+    <Compile Include="TachikawanoHealthSystem\urls.py" />
+    <Compile Include="TachikawanoHealthSystem\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hon_sen\templates\hon_sen\about.html" />
+    <Content Include="hon_sen\templates\hon_sen\contact.html" />
+    <Content Include="hon_sen\templates\hon_sen\home.html" />
+    <Content Include="hon_sen\templates\hon_sen\register.html" />
+    <Content Include="static\css\hon.css" />
+    <Content Include="hon_sen\templates\hon_sen\hon.html" />
+    <Content Include="hon_sen\templates\hon_sen\navbar.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\images\Fig1_PedOI.jpg" />
+    <Content Include="static\images\okaasan_-_aka_chan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="hon_sen\" />
+    <Folder Include="hon_sen\migrations\" />
+    <Folder Include="hon_sen\templates\" />
+    <Folder Include="hon_sen\templates\hon_sen\" />
+    <Folder Include="static\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\images\" />
+    <Folder Include="TachikawanoHealthSystem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.11</Version>
+      <Description>env (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
